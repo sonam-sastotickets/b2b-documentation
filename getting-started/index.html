@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#url-integration-for-apps" class="md-skip">
+        <a href="#json-configuration-for-booking" class="md-skip">
           Skip to content
         </a>
       
@@ -281,16 +281,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#url-integration-for-apps" class="md-nav__link">
-    <span class="md-ellipsis">
-      URL Integration for Apps
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="URL Integration for Apps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#json-configuration-for-booking" class="md-nav__link">
     <span class="md-ellipsis">
       JSON Configuration for Booking
@@ -298,8 +288,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#base64-encoding-and-url-construction" class="md-nav__link">
     <span class="md-ellipsis">
       Base64 Encoding and URL Construction
@@ -307,8 +297,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#open-the-url-in-the-app" class="md-nav__link">
     <span class="md-ellipsis">
       Open the URL in the App
@@ -316,8 +306,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#flights-search-booking" class="md-nav__link">
     <span class="md-ellipsis">
       Flights Search &amp; Booking
@@ -325,27 +315,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#capturing-response" class="md-nav__link">
     <span class="md-ellipsis">
       Capturing Response
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#payment-processing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Payment Processing
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -422,16 +398,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#url-integration-for-apps" class="md-nav__link">
-    <span class="md-ellipsis">
-      URL Integration for Apps
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="URL Integration for Apps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#json-configuration-for-booking" class="md-nav__link">
     <span class="md-ellipsis">
       JSON Configuration for Booking
@@ -439,8 +405,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#base64-encoding-and-url-construction" class="md-nav__link">
     <span class="md-ellipsis">
       Base64 Encoding and URL Construction
@@ -448,8 +414,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#open-the-url-in-the-app" class="md-nav__link">
     <span class="md-ellipsis">
       Open the URL in the App
@@ -457,8 +423,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#flights-search-booking" class="md-nav__link">
     <span class="md-ellipsis">
       Flights Search &amp; Booking
@@ -466,27 +432,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#capturing-response" class="md-nav__link">
     <span class="md-ellipsis">
       Capturing Response
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#payment-processing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Payment Processing
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -507,22 +459,26 @@
 
   <h1>Integration with Apps</h1>
 
-<h2 id="url-integration-for-apps">URL Integration for Apps</h2>
 <h3 id="json-configuration-for-booking">JSON Configuration for Booking</h3>
-<p>To initiate the booking process, the following JSON configuration must be generated:</p>
-<pre><code class="language-json">{
-    &quot;access_token&quot;: &quot;&lt;accessToken from previous step&gt;&quot;,
-    &quot;phone_number&quot;: 9800000000,
-    &quot;wallet_balance&quot;: 30000,
-    &quot;success_url&quot;: &quot;https://example.sastotickets.com/success&quot;,
-    &quot;failure_url&quot;: &quot;https://example.sastotickets.com/failure&quot;
-}
-</code></pre>
+<p>To initiate the booking process, the following JSON configuration must be generated:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;access_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;accessToken from previous step&gt;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;phone_number&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">9800000000</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;wallet_balance&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30000</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;success_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://example.sastotickets.com/success&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;failure_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://example.sastotickets.com/failure&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>wallet_balance</em> can be set to null if restriction related to amount is NOT required when booking.</p>
+</div>
 <h3 id="base64-encoding-and-url-construction">Base64 Encoding and URL Construction</h3>
 <ol>
 <li>Convert the JSON configuration to a Base64-encoded string.</li>
 <li>Append the encoded string to the base URL provided by the Sasto Tickets Team as follows:
-   <code>https://&lt;b2c_url&gt;/?data=&lt;encoded base64 value&gt;</code></li>
+   <div class="highlight"><pre><span></span><code>https://&lt;b2c_url&gt;/?data=&lt;encoded base64 value&gt;
+</code></pre></div></li>
 </ol>
 <h3 id="open-the-url-in-the-app">Open the URL in the App</h3>
 <p>Once the URL is constructed, open it in a web view or browser within your app to initiate the booking process.</p>
@@ -535,8 +491,6 @@
 <li>For success: <code>https://example.sastotickets.com/success?data=&lt;data&gt;</code> as set in the JSON.</li>
 <li>For failure: <code>https://example.sastotickets.com/failure?message=&lt;error_message&gt;</code> as set in the JSON.</li>
 </ul>
-<h3 id="payment-processing">Payment Processing</h3>
-<p>After capturing the booking data, vendors can process the payment independently using their own systems.</p>
 
 
 
@@ -554,6 +508,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -622,7 +578,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.footer"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.footer", "content.tabs.link"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.525ec568.min.js"></script>
