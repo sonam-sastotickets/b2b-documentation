@@ -67,6 +67,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#sample-request" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -279,6 +284,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Ticketing
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -288,6 +304,50 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sample-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Request
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Response
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-error-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Error Response
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -311,6 +371,41 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sample-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Request
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Response
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-error-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Error Response
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -326,10 +421,588 @@
 
   <h1>Ticketing</h1>
 
-<pre><code>Endpoint: ~/issue-ticket
+<div class="highlight"><pre><span></span><code>Endpoint: ~/issue-ticket
 Method: Post
 Header Params: Content-Type  : application/json
 Authorization : Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9nZHMtYWRtaW4udGVzdFwvYXBpXC9pbnRsXC9hbmRyb2lkXC9pbml0aWFsaXplIiwiaWF0IjoxNjEzMzg1ODY3LCJleHAiOjE2MTMzODk0NjcsIm5iZiI6MTYxMzM4NTg2NywianRpIjoiY3o2eFZLdEVkd05jTTRVcCIsInN1YiI6MTMsInBydiI6IjQyZWRlMzMzNGEwNGNkNjVjYjJiZTNmNWFkZmViMmMxZWRkMzA3NzQifQ.UzEWszpOW92jOqSkdciWoGV4456CdS1nuPx7Tql-_Xk
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th><strong>Attribute</strong></th>
+<th><strong>Datatype</strong></th>
+<th><strong>Required</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Values</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>user_type</code></td>
+<td><code>string</code></td>
+<td>Optional</td>
+<td>Agent user type</td>
+<td><code>agent</code>, <code>customer</code></td>
+</tr>
+<tr>
+<td><code>bookingReferenceID</code></td>
+<td><code>bookingReferenceID</code></td>
+<td>Required</td>
+<td>Booking Reference ID from booking response</td>
+<td></td>
+</tr>
+<tr>
+<td><code>tripType</code></td>
+<td><code>string</code></td>
+<td>Required</td>
+<td>Trip Type</td>
+<td></td>
+</tr>
+<tr>
+<td><code>currency</code></td>
+<td><code>string</code></td>
+<td>Required</td>
+<td>Currency Type</td>
+<td><code>NPR</code>, <code>USD</code></td>
+</tr>
+<tr>
+<td><code>PNR</code></td>
+<td><code>string</code></td>
+<td>Optional</td>
+<td>Passenger Name Record (PNR)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>amount</code></td>
+<td><code>integer</code></td>
+<td>Optional</td>
+<td>Total fare amount</td>
+<td></td>
+</tr>
+<tr>
+<td><code>referenceCode</code></td>
+<td><code>string</code></td>
+<td>Optional</td>
+<td>Agent Reference code or transaction identifier</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="sample-request">Sample Request</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">One Way</label><label for="__tabbed_1_2">Round Trip</label><label for="__tabbed_1_3">Multi City</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="s">&quot;user_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;agent&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;bookingReferenceID&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;e1caec16-f675-48ea-a40c-5e1d05741300&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;tripType&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;oneway&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;referenceCode&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;KFIKDHKSKDH&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;PNR&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;PQMJ8E&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;amount&quot;</span><span class="o">:</span><span class="w"> </span><span class="mi">42149</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;currency&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;NPR&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="s">&quot;user_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;agent&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;bookingReferenceID&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2368c81d-d420-453f-a0ae-9fb5530ba34b&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;tripType&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;round&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;referenceCode&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;KFIKDHKSKDH&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;PNR&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;PQVBOE&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;amount&quot;</span><span class="o">:</span><span class="w"> </span><span class="mi">74514</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;currency&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;NPR&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="s">&quot;user_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;agent&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;bookingReferenceID&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;d2c3b2fc-9bcd-4718-b0ee-7ed147b083e7&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;tripType&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;multicity&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;referenceCode&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;KFIKDHKSKDH&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;PNR&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;PQXM2B&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;amount&quot;</span><span class="o">:</span><span class="w"> </span><span class="mi">106959</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;currency&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;NPR&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="sample-response">Sample Response</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">One Way</label><label for="__tabbed_2_2">Round Trip</label><label for="__tabbed_2_3">Multi City</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="s">&quot;success&quot;</span><span class="o">:</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;data&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s">&quot;ticketSummary&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="s">&quot;ticketReferenceID&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;29f27b24-3f33-4190-9835-9859c790fc47&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;PNR&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;PQMJ8E&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;tripType&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;oneway&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;currency&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;NPR&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;issued_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Tue, Feb 14, 2023&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="s">&quot;flightSummary&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="s">&quot;airline_confirmation_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;PQMJ8E&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;departure_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2023-07-22&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;departure_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;10:10 AM&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;arrival_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2023-07-22&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;arrival_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;12:25 PM&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;total_flying_hours&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;05 Hr 00 Min&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;depart_city_airport_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;KTM&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;depart_city_airport_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Tribhuvan Intl Airport&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;depart_city_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Kathmandu City&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;depart_city_country&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Nepal&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;carrierCode&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;QR&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;carrierLogo&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/airlines/1633428326-1898803185.png&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;carrierName&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Qatar Airways&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;dest_city_airport_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;DOH&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;dest_city_airport_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Hamad Int’l Airport&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;dest_city_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Doha&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;dest_city_country&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Qatar&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;flight_segments&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="s">&quot;carrierCode&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;QR&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;carrierName&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Qatar Airways&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;carrierLogo&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/airlines/1633428326-1898803185.png&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;flight_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;653&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;flight_equipment&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Airbus A330-300&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;cabin_class&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;M&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2023-07-22&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;10:10 AM&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2023-07-22&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;12:25 PM&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_total_flying_hours&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;05:00:00&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_airport_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;KTM&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_airport&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Tribhuvan Intl Airport&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_city&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Kathmandu City&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_country&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Nepal&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_terminal&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;I&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_airport_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;DOH&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_airport&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Hamad Int’l Airport&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_city&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Doha&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_country&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Qatar&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_terminal&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_connection_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="nb">false</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="s">&quot;fareInformation&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="s">&quot;total_adt&quot;</span><span class="o">:</span><span class="w"> </span><span class="mi">41893</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;total_chd&quot;</span><span class="o">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;total_inf&quot;</span><span class="o">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;total_cost&quot;</span><span class="o">:</span><span class="w"> </span><span class="mi">41893</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;cashBack&quot;</span><span class="o">:</span><span class="w"> </span><span class="mi">300</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="s">&quot;baggageDetails&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="s">&quot;cabin&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;7 Kg&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;baggage&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;30 Kg&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="s">&quot;passengers&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="s">&quot;passenger_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;ADT&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;passenger_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Maharjan Rabi&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;eticket_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;157-6752209683&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;PNR&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;PQMJ8E&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;airlines_confirmation&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;PQMJ8E&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="s">&quot;contactDetails&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="s">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;maharjanrabi1@gmail.com&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;phone&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;9849932310&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="s">&quot;eticketLink&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;https://sastotickets-flights-private.s3.ap-southeast-1.amazonaws.com/tickets/PQMJ8E-1676354461.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA4CEOEY6AUXGMCTXF%2F20230214%2Fap-southeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230214T060104Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=900&amp;X-Amz-Signature=a834632054848ad610561f9a7588a1ff789ae2a35c7991f091d97a043ed7d043&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="s">&quot;success&quot;</span><span class="o">:</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;data&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s">&quot;ticketSummary&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="s">&quot;ticketReferenceID&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;f767edef-1334-4ac9-ae02-2f328db9fd8c&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;PNR&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;PQVBOE&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;tripType&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;round&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;currency&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;NPR&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;issued_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Tue, Feb 14, 2023&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="s">&quot;flightSummary&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="s">&quot;airline_confirmation_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;PQVBOE&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;departure_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2023-07-22&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;departure_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;10:10 AM&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;depart_city_airport_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;KTM&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;depart_city_airport_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Tribhuvan Intl Airport&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;depart_city_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Kathmandu City&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;depart_city_country&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Nepal&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;arrival_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2023-07-22&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;arrival_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;12:25 PM&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;total_flying_hours&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;05 Hr 00 Min&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;dest_city_airport_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;DOH&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;dest_city_airport_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Hamad Int’l Airport&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;dest_city_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Doha&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;dest_city_country&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Qatar&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;carrierCode&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;QR&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;carrierLogo&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/airlines/1633428326-1898803185.png&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;carrierName&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Qatar Airways&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;return_departure_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2023-07-30&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;return_departure_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;00:35 AM&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;return_depart_city_airport_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;DOH&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;return_depart_city_airport_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Hamad Int’l Airport&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;return_depart_city_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Doha&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;return_depart_city_country&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Qatar&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;return_arrival_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2023-07-30&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;return_arrival_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;08:05 AM&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;return_total_flying_hours&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;04 Hr 45 Min&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;return_dest_city_airport_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;KTM&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;return_dest_city_airport_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Tribhuvan Intl Airport&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;return_dest_city_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Kathmandu City&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;return_dest_city_country&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Nepal&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;carrierCodeReturn&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;QR&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;carrierLogoReturn&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/airlines/1633428326-1898803185.png&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;carrierNameReturn&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Qatar Airways&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;flight_segments_outbound&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="s">&quot;carrierCode&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;QR&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;carrierName&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Qatar Airways&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;carrierLogo&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/airlines/1633428326-1898803185.png&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;flight_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;653&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;flight_equipment&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Airbus A330-300&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;cabin_class&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;M&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2023-07-22&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;10:10 AM&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2023-07-22&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;12:25 PM&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_total_flying_hours&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;05:00:00&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_airport_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;KTM&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_airport&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Tribhuvan Intl Airport&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_city&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Kathmandu City&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_country&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Nepal&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_terminal&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;I&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_airport_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;DOH&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_airport&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Hamad Int’l Airport&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_city&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Doha&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_country&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Qatar&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_terminal&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_connection_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="nb">false</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="s">&quot;flight_segments_return&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="s">&quot;carrierCode&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;QR&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;carrierName&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Qatar Airways&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;carrierLogo&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/airlines/1633428326-1898803185.png&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;flight_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;652&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;flight_equipment&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Airbus A330-300&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;cabin_class&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;M&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2023-07-30&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;00:35 AM&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2023-07-30&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;08:05 AM&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_total_flying_hours&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;04:45:00&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_airport_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;DOH&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_airport&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Hamad Int’l Airport&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_city&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Doha&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_country&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Qatar&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_terminal&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_airport_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;KTM&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_airport&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Tribhuvan Intl Airport&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_city&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Kathmandu City&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_country&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Nepal&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_terminal&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;I&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_connection_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="nb">false</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="s">&quot;fareInformation&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="s">&quot;total_adt&quot;</span><span class="o">:</span><span class="w"> </span><span class="mi">41893</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;total_chd&quot;</span><span class="o">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;total_inf&quot;</span><span class="o">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;total_cost&quot;</span><span class="o">:</span><span class="w"> </span><span class="mi">41893</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;cashBack&quot;</span><span class="o">:</span><span class="w"> </span><span class="mi">300</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="s">&quot;baggageDetails&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="s">&quot;outbound&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="s">&quot;cabin&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;7 Kg&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;baggage&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;30 Kg&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="s">&quot;return&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="s">&quot;cabin&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;7 Kg&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;baggage&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;25 Kg&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="s">&quot;passengers&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="s">&quot;passenger_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;ADT&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;passenger_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Maharjan Rabi&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;eticket_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;157-6752209684&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;PNR&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;PQVBOE&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;airlines_confirmation&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;PQVBOE&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="s">&quot;contactDetails&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="s">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;maharjanrabi1@gmail.com&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;phone&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;9849932310&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="s">&quot;eticketLink&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;https://sastotickets-flights-private.s3.ap-southeast-1.amazonaws.com/tickets/PQMJ8E-1676354461.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA4CEOEY6AUXGMCTXF%2F20230214%2Fap-southeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230214T060104Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=900&amp;X-Amz-Signature=a834632054848ad610561f9a7588a1ff789ae2a35c7991f091d97a043ed7d043&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="s">&quot;success&quot;</span><span class="o">:</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;data&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s">&quot;ticketSummary&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="s">&quot;ticketReferenceID&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;c6493116-25b8-4105-a26a-1c79937c5421&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;PNR&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;PQXM2B&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;tripType&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;multicity&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;currency&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;NPR&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;issued_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Tue, Feb 14, 2023&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="s">&quot;flightSummary&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="s">&quot;flight_segments&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="s">&quot;airline_confirmation_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;197IJB&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2023-08-01&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;15:45 PM&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2023-08-02&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;03:20 AM&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_total_flying_hours&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;01 Hr 45 Min&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_airport_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;KTM&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_airport&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Tribhuvan Intl Airport&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_city&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Kathmandu City&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_country&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Nepal&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_airport_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;DEL&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_airport&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Indira Gandhi Int’l Airport&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_city&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;New Delhi&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_country&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;India&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;carrierCode&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;FZ&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;carrierLogo&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/airlines/FZ_flydubai.png&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;carrierName&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Fly Dubai&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;connecting_segments&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                        </span><span class="p">{</span>
+<span class="w">                            </span><span class="s">&quot;carrierCode&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;FZ&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;carrierName&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Fly Dubai&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;carrierLogo&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/airlines/FZ_flydubai.png&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;flight_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;540&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;flight_equipment&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Boeing 737&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;cabin_class&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;M&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2023-08-01&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;15:45 PM&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2023-08-01&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;18:50 PM&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_total_flying_hours&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;04:50:00&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_airport_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;KTM&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_airport&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Tribhuvan Intl Airport&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_city&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Kathmandu City&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_country&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Nepal&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_terminal&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;I&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_airport_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;DXB&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_airport&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Dubai Int’l Airport&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_city&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Dubai&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_country&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;United Arab Emirates&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_terminal&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_connection_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="nb">false</span>
+<span class="w">                        </span><span class="p">},</span>
+<span class="w">                        </span><span class="p">{</span>
+<span class="w">                            </span><span class="s">&quot;carrierCode&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;FZ&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;carrierName&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Fly Dubai&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;carrierLogo&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/airlines/FZ_flydubai.png&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;flight_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;431&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;flight_equipment&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Boeing 737&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;cabin_class&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;M&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2023-08-01&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;22:10 PM&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2023-08-02&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;03:20 AM&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_total_flying_hours&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;03:40:00&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_airport_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;DXB&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_airport&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Dubai Int’l Airport&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_city&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Dubai&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_country&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;United Arab Emirates&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_terminal&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_airport_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;DEL&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_airport&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Indira Gandhi Int’l Airport&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_city&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;New Delhi&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_country&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;India&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_terminal&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;3&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_connection_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;05 hr 10 min&quot;</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                    </span><span class="p">]</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="s">&quot;airline_confirmation_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;197IJB&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2023-08-10&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;04:20 AM&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2023-08-10&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;07:00 AM&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_total_flying_hours&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;01 Hr 45 Min&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_airport_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;DEL&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_airport&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Indira Gandhi Int’l Airport&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_city&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;New Delhi&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_country&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;India&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_airport_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;DXB&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_airport&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Dubai Int’l Airport&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_city&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Dubai&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_country&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;United Arab Emirates&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;carrierCode&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;FZ&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;carrierLogo&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/airlines/FZ_flydubai.png&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;carrierName&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Fly Dubai&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;connecting_segments&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                        </span><span class="p">{</span>
+<span class="w">                            </span><span class="s">&quot;carrierCode&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;FZ&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;carrierName&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Fly Dubai&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;carrierLogo&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/airlines/FZ_flydubai.png&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;flight_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;432&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;flight_equipment&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Boeing 737&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;cabin_class&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;M&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2023-08-10&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;04:20 AM&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2023-08-10&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;07:00 AM&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_total_flying_hours&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;04:10:00&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_airport_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;DEL&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_airport&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Indira Gandhi Int’l Airport&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_city&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;New Delhi&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_country&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;India&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_terminal&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;3&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_airport_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;DXB&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_airport&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Dubai Int’l Airport&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_city&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Dubai&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_country&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;United Arab Emirates&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_terminal&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_connection_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="nb">false</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                    </span><span class="p">]</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="s">&quot;airline_confirmation_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;197IJB&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2023-08-15&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;13:50 PM&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2023-08-15&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;20:00 PM&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_total_flying_hours&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;01 Hr 45 Min&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_airport_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;DXB&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_airport&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Dubai Int’l Airport&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_city&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Dubai&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_departure_country&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;United Arab Emirates&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_airport_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;KTM&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_airport&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Tribhuvan Intl Airport&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_city&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Kathmandu City&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;seg_arrival_country&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Nepal&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;carrierCode&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;FZ&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;carrierLogo&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/airlines/FZ_flydubai.png&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;carrierName&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Fly Dubai&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s">&quot;connecting_segments&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                        </span><span class="p">{</span>
+<span class="w">                            </span><span class="s">&quot;carrierCode&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;FZ&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;carrierName&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Fly Dubai&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;carrierLogo&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/airlines/FZ_flydubai.png&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;flight_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;573&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;flight_equipment&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Boeing 737&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;cabin_class&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;M&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2023-08-15&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;13:50 PM&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2023-08-15&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;20:00 PM&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_total_flying_hours&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;04:25:00&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_airport_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;DXB&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_airport&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Dubai Int’l Airport&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_city&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Dubai&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_country&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;United Arab Emirates&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_departure_terminal&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_airport_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;KTM&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_airport&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Tribhuvan Intl Airport&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_city&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Kathmandu City&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_country&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Nepal&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_arrival_terminal&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;I&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="s">&quot;seg_connection_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="nb">false</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                    </span><span class="p">]</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="s">&quot;fareInformation&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="s">&quot;total_adt&quot;</span><span class="o">:</span><span class="w"> </span><span class="mi">41893</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;total_chd&quot;</span><span class="o">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;total_inf&quot;</span><span class="o">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;total_cost&quot;</span><span class="o">:</span><span class="w"> </span><span class="mi">41893</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;cashBack&quot;</span><span class="o">:</span><span class="w"> </span><span class="mi">300</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="s">&quot;baggageDetails&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="s">&quot;cabin&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;7 Kg&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;baggage&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;20 Kg&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="s">&quot;passengers&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="s">&quot;passenger_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;ADT&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;passenger_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Maharjan Rabi&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;eticket_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;141-6752209685&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;PNR&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;PQXM2B&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;airlines_confirmation&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;197IJB&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="s">&quot;contactDetails&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="s">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;maharjanrabi1@gmail.com&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;phone&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;9849932310&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="s">&quot;eticketLink&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;https://sastotickets-flights-private.s3.ap-southeast-1.amazonaws.com/tickets/PQMJ8E-1676354461.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA4CEOEY6AUXGMCTXF%2F20230214%2Fap-southeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230214T060104Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=900&amp;X-Amz-Signature=a834632054848ad610561f9a7588a1ff789ae2a35c7991f091d97a043ed7d043&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="sample-error-response">Sample Error Response</h3>
+<pre><code>Case: Validation Error
+{
+    "success": false,
+    "data": {
+        "error": "Invalid Ticket Parameters."
+    }
+}
+
+{
+    "success": false,
+    "data": {
+        "error": "Ticket already issued."
+    }
+}
+
+{
+    "success": false,
+    "data": {
+        "error": "Invalid PNR record"
+    }
+}
+
+
+Case: Booking transaction not found
+{
+    "success": false,
+    "data": {
+        "error": "Booking Records Not Found."
+    }
+}
+
+
+Case: Insufficient Agent Balance
+{
+    "success": false,
+    "data": {
+        "error": "Insufficient balance amount. Please top up and continue."
+    }
+}
+
+Case: Ticketing Failed
+{
+    "success": false,
+    "data": {
+        "error": "Sorry! Flight has been booked or not available. Please try with another flight."
+    }
+}
 </code></pre>
 
 
@@ -348,6 +1021,8 @@ Authorization : Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwv
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -400,7 +1075,7 @@ Authorization : Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwv
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.footer"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.footer", "content.tabs.link"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.525ec568.min.js"></script>

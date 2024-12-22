@@ -406,29 +406,29 @@
   <h1>Authorization</h1>
 
 <h3 id="get-access-token">Get Access Token</h3>
-<pre><code>    Endpoint: ~/get-token
+<p><div class="highlight"><pre><span></span><code>    Endpoint: ~/get-token
     Method: Post
     Header Params: Content-Type: application/json
     Body Params:   username: &quot;agent@example.com&quot;
                 password: &quot;123456&quot;
-</code></pre>
-<p>Sample Response</p>
-<pre><code>{
+</code></pre></div>
+Sample Response
+<div class="highlight"><pre><span></span><code>{
     &quot;success&quot;: true,
     &quot;data&quot;: {
         &quot;tokenType&quot;: &quot;Bearer&quot;,
         &quot;accessToken&quot;: &quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hcGkuc2FzdG90aWNrZXRzLmxvY2FsXC9hcGlcL2IyYlwvdjFcL2dldC10b2tlbiIsImlhdCI6MTY3NjI4OTk1OSwibmJmIjoxNjc2Mjg5OTU5LCJqdGkiOiJvT0dlblZXUUJoa0Y3eE1qIiwic3ViIjo5LCJwcnYiOiJmMjdkYmYzNzkwZTdiMWZjYThkZmI2Yzg4ZWY5NWFmOTA0NmE4OGZjIn0.lgO6vxG6d0LuAODLVnxO4e6ZBppVo9NbosId0tEZKlA&quot;
     }
 }
-</code></pre>
-<p>Note: "accessToken" must be set in the Authorization Header of every API Request.</p>
+</code></pre></div>
+Note: "accessToken" must be set in the Authorization Header of every API Request.</p>
 <h3 id="refresh-access-token">Refresh Access Token</h3>
-<pre><code>    Endpoint: ~/refresh-token
+<p><div class="highlight"><pre><span></span><code>    Endpoint: ~/refresh-token
     Method: Post
     Header Params: Content-Type: application/json
                 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hcGkuc2FzdG90aWNrZXRzLmxvY2FsXC9hcGlcL2IyYlwvdjFcL2dldC10b2tlbiIsImlhdCI6MTY3NjI4OTk1OSwibmJmIjoxNjc2Mjg5OTU5LCJqdGkiOiJvT0dlblZXUUJoa0Y3eE1qIiwic3ViIjo5LCJwcnYiOiJmMjdkYmYzNzkwZTdiMWZjYThkZmI2Yzg4ZWY5NWFmOTA0NmE4OGZjIn0.lgO6vxG6d0LuAODLVnxO4e6ZBppVo9NbosId0tEZKlA
-</code></pre>
-<p>Sample Response</p>
+</code></pre></div>
+Sample Response</p>
 <pre><code>    {
         "success": true,
         "data": {
@@ -479,6 +479,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -547,7 +549,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.footer"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.footer", "content.tabs.link"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.525ec568.min.js"></script>
