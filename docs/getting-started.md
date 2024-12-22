@@ -1,5 +1,3 @@
-## URL Integration for Apps
-
 ### JSON Configuration for Booking
 To initiate the booking process, the following JSON configuration must be generated:
 ```json
@@ -11,6 +9,9 @@ To initiate the booking process, the following JSON configuration must be genera
     "failure_url": "https://example.sastotickets.com/failure"
 }
 ```
+!!! note
+
+    *wallet_balance* can be set to null if restriction related to amount is NOT required when booking.
 
 ### Base64 Encoding and URL Construction
 1. Convert the JSON configuration to a Base64-encoded string.
@@ -30,7 +31,3 @@ The SDK facilitates the flight search functionality and the availability of sele
 - The app will have to handle the redirection URLs to capture success or failure responses:
   - For success: `https://example.sastotickets.com/success?data=<data>` as set in the JSON.
   - For failure: `https://example.sastotickets.com/failure?message=<error_message>` as set in the JSON.
-
-### Payment Processing
-After capturing the booking data, vendors can process the payment independently using their own systems.
-

@@ -5,6 +5,7 @@ theme:
     # - navigation.expand
     - navigation.sections
     - navigation.footer
+    - content.tabs.link
   font:
     text: Inter   
   name: material
@@ -21,3 +22,8 @@ nav:
 - Integration with Apps : getting-started.md
 - Payment : payment.md
 - Ticketing : ticketing.md
+markdown_extensions:
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
