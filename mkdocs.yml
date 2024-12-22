@@ -1,0 +1,23 @@
+site_name: Sasto Tickets Vendor Documentation
+# site_url: https://mydomain.org/mysite
+theme:
+  features:
+    # - navigation.expand
+    - navigation.sections
+    - navigation.footer
+  font:
+    text: Inter   
+  name: material
+  palette:
+    primary: red
+copyright: Copyright &copy; 2024 Sasto Tickets Pvt. Ltd.
+extra:
+  generator: false
+  meta:
+    robots: "noindex, nofollow"
+nav:
+- Introduction : index.md
+- Authorization : authorization.md
+- Integration with Apps : getting-started.md
+- Payment : payment.md
+- Ticketing : ticketing.md

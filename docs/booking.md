@@ -1,0 +1,4 @@
+   - Once the SDK URL is open in a web view or browser within your app, the users can use our solution to search and book a flight.
+   - The app will have to handle the redirection URLs to capture success or failure responses.
+     - For success: `https://example.sastotickets.com/success?data=<data>` as set in Step 1
+     - For failure: `https://example.sastotickets.com/success?message=<error_message>` as set in Step 1
