@@ -5,7 +5,7 @@
 The Sasto Tickets Web-Based SDK enables seamless integration of flight booking and ticketing features into vendor applications. Designed for B2C use, the SDK simplifies the interaction by allowing vendors to manage payment and ticket issuance while we handle the core booking operations.
 
 ### Setting Up:
-Vendors need to set up a B2B account with us. They will be provided with the **BASE_API_URL** and credentials for both UAT (User Acceptance Testing) and live environments by our Team.
+Vendors need to set up an business account with us. They will be provided with the **BASE_API_URL** and credentials for both UAT (User Acceptance Testing) and live environments by our Team.
 
 ### How It Works:
 
