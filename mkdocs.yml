@@ -22,6 +22,7 @@ nav:
 - Integration with Apps : getting-started.md
 - Payment : payment.md
 - Ticketing : ticketing.md
+- Postman : postman.md
 markdown_extensions:
   - admonition
   - pymdownx.superfences
