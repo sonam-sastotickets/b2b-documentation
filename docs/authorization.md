@@ -18,15 +18,6 @@ Sample Response
 ```
 Note: "accessToken" must be set in the Authorization Header of every API Request.
 
-Sample Response
-
-        {
-            "success": true,
-            "data": {
-                "tokenType": "Bearer",
-                "accessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hcGkuc2FzdG90aWNrZXRzLmxvY2FsXC9hcGlcL2IyYlwvdjFcL3JlZnJlc2gtdG9rZW4iLCJpYXQiOjE2NzYyODYwMTcsIm5iZiI6MTY3NjI5MDE0OSwianRpIjoidVh4VkpITm54NlpiVEE1VCIsInN1YiI6OX0.0YjBCNT0nUI7oMBv_uf7eRlBlTBSwBybQ7twO84jWWk"
-            }
-        }
 Sample Error Response
 
 Case: Invalid parameters

@@ -323,6 +323,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Capturing Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#success" class="md-nav__link">
+    <span class="md-ellipsis">
+      Success
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -460,6 +484,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Capturing Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#success" class="md-nav__link">
+    <span class="md-ellipsis">
+      Success
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -506,10 +554,143 @@
 <p>The SDK facilitates the flight search functionality and the availability of selected flights and provides detailed options. The SDK handles flight reservation, returning booking details to the vendor.</p>
 <h3 id="capturing-response">Capturing Response</h3>
 <ul>
-<li>Once the SDK URL is open in a web view or browser within your app, users can use our solution to search and book a flight.</li>
+<li>Once the SDK URL is open in a web view or browser within your app, users can use our solution to search and book a flight</li>
 <li>The app will have to handle the redirection URLs to capture success or failure responses:</li>
-<li>For success: <code>https://example.sastotickets.com/success?data=&lt;data&gt;</code> as set in the JSON.</li>
-<li>For failure: <code>https://example.sastotickets.com/failure?message=&lt;error_message&gt;</code> as set in the JSON.</li>
+</ul>
+<h4 id="success">Success</h4>
+<p>For success: <code>https://example.sastotickets.com/success?data=&lt;data&gt;</code> as set in the JSON.
+Example:</p>
+<pre><code>https://example.sastotickets.com/success?data=eyJ0b3RhbENvc3QiOjQ0MDcsImJlYXJlclRva2VuIjoiZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUo5LmV5SnBjM01pT2lKb2RIUndPbHd2WEM5aGNHa3VjMkZ6ZEc5MGFXTnJaWFJ6TG1OdmJWd3ZZWEJwWEM5aU1tSmNMM1l4WEM5blpYUXRkRzlyWlc0aUxDSnBZWFFpT2pFMk9EVTROamN6Tmpnc0ltNWlaaUk2TVRZNE5UZzJOek0yT0N3aWFuUnBJam9pVVc4MmExWkZNVGxMY1ZCcVZrSkNaeUlzSW5OMVlpSTZOeXdpY0hKMklqb2laakkzWkdKbU16YzVNR1UzWWpGbVkyRTRaR1ppTm1NNE9HVm1PVFZoWmprd05EWmhPRGhtWXlKOS4wREhFMzNIUWpJeUZGTzZPQ00zSlB5a3FMeGNBVDFpSXBuYzExUTBYVU1NIiwiZmxpZ2h0U3VtbWFyeSI6eyJkZXBhcnR1cmVGbGlnaHQiOnsiY2FycmllckNvZGUiOiJTMSIsImNhcnJpZXJMb2dvIjoiaHR0cHM6Ly9zYXN0b3RpY2tldHMtdWF0LWZsaWdodHMuczMuYXAtc291dGhlYXN0LTEuYW1hem9uYXdzLmNvbS9haXJsaW5lcy8xNTYyNTc4NTQ4LTUzMzk4Mi5wbmciLCJjYXJyaWVyTmFtZSI6IlNhdXJ5YSBBaXJsaW5lcyIsImRlcHREYXRlIjoiMjAyNS0wMy0xNSIsImRlcHRUaW1lIjoiMDg6MDAgQU0iLCJhcnJpdmFsRGF0ZSI6IjIwMjUtMDMtMTUiLCJhcnJpdmFsVGltZSI6IjA4OjMwIEFNIiwiZGVwYXJ0dXJlQWlycG9ydENvZGUiOiJLVE0iLCJkZXBhcnR1cmVBaXJwb3J0IjoiVHJpYmh1dmFuIEludOKAmWwgQWlycG9ydCIsImRlcGFydHVyZUNpdHkiOiJLYXRobWFuZHUiLCJkZXBhcnR1cmVDb3VudHJ5IjoiTmVwYWwiLCJhcnJpdmFsQWlycG9ydENvZGUiOiJQS1IiLCJhcnJpdmFsQWlycG9ydCI6IlBva2hhcmEgQWlycG9ydCIsImFycml2YWxDaXR5IjoiUG9raGFyYSIsImFycml2YWxDb3VudHJ5IjoiTmVwYWwifSwicmV0dXJuRmxpZ2h0IjpudWxsfSwiZW1lcmdlbmN5Q29udGFjdCI6eyJjb250YWN0IjoiOTg0MDAxMDE5MSIsImVtYWlsIjoic29uYWFtLmhpdGFuZ0BnbWFpbC5jb20iLCJuYW1lIjoiQW5pbCBSYXlhbWFqaGkifSwiYm9va2luZ1N1bW1hcnkiOnsiUE5SIjoiSVVTUDFDIiwiYm9va2luZ1JlZmVyZW5jZUlEIjoiZDU2ODBlZDctYTI3ZC00ZDc2LTg5MjEtMmE2MGI0YWFlODY2IiwiY3VycmVuY3kiOiJOUFIiLCJwYXNzZW5nZXJzIjpbeyJwYXNzZW5nZXJfaWQiOiJTVDI0NjY4IiwicGFzc2VuZ2VyX3R5cGUiOiJBRFQiLCJwYXNzZW5nZXJfbmFtZSI6IlJheWFtYWpoaSBBbmlsIn1dLCJ0cmlwVHlwZSI6Im9uZXdheSJ9fQ==
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You will have to decode the data captured from base64 to get the json response, The data from this step will be used in the Ticketing API</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">One Way</label><label for="__tabbed_1_2">Round Trip</label><label for="__tabbed_1_3">Multi City</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="s">&quot;totalCost&quot;</span><span class="o">:</span><span class="w"> </span><span class="mi">4407</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;bearerToken&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;-&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;flightSummary&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s">&quot;departureFlight&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s">&quot;carrierCode&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;S1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;carrierLogo&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;https://sastotickets-uat-flights.s3.ap-southeast-1.amazonaws.com/airlines/1562578548-533982.png&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;carrierName&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Saurya Airlines&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;deptDate&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2025-01-14&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;deptTime&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;08:00 AM&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;arrivalDate&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2025-01-14&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;arrivalTime&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;08:30 AM&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;departureAirportCode&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;KTM&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;departureAirport&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Tribhuvan Int’l Airport&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;departureCity&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Kathmandu&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;departureCountry&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Nepal&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;arrivalAirportCode&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;PKR&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;arrivalAirport&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Pokhara Airport&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;arrivalCity&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Pokhara&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;arrivalCountry&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Nepal&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="s">&quot;returnFlight&quot;</span><span class="o">:</span><span class="w"> </span><span class="n">null</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="s">&quot;emergencyContact&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s">&quot;contact&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;9800000001&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;sonam@sastotickets.com&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;-&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="s">&quot;bookingSummary&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s">&quot;PNR&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;JUSP1C&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;bookingReferenceID&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;52c8a810-089a-428f-b12d-4040592a9116&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;currency&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;NPR&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;passengers&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="s">&quot;passenger_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;ST24669&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;passenger_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;ADT&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;passenger_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;-&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="s">&quot;tripType&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;oneway&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="s">&quot;totalCost&quot;</span><span class="o">:</span><span class="w"> </span><span class="mi">67342</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;bearerToken&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;-&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;flightSummary&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s">&quot;departureFlight&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s">&quot;carrierCode&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;AI&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;carrierLogo&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/airlines/1703064315-1249041617.png&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;carrierName&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Air India&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;deptDate&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2025-09-23&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;deptTime&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;14:55 PM&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;arrivalDate&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2025-09-23&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;arrivalTime&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;21:10 PM&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;departureAirportCode&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;KTM&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;departureAirport&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Tribhuvan Int’l Airport&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;departureCity&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Kathmandu&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;departureCountry&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Nepal&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;arrivalAirportCode&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;DOH&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;arrivalAirport&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Hamad Int’l Airport&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;arrivalCity&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Doha&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;arrivalCountry&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Qatar&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="s">&quot;returnFlight&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s">&quot;carrierCode&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;AI&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;carrierLogo&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/airlines/1703064315-1249041617.png&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;carrierName&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Air India&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;deptDate&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2025-09-30&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;deptTime&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;22:10 PM&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;arrivalDate&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;2025-10-01&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;arrivalTime&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;13:55 PM&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;departureAirportCode&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;DOH&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;departureAirport&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Hamad Int’l Airport&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;departureCity&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Doha&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;departureCountry&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Qatar&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;arrivalAirportCode&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;KTM&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;arrivalAirport&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Tribhuvan Int’l Airport&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;arrivalCity&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Kathmandu&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;arrivalCountry&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Nepal&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="s">&quot;emergencyContact&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s">&quot;contact&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;9840000000&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;sonam@sastotickets.com&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Anil Rayamajhi&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="s">&quot;bookingSummary&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s">&quot;PNR&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;RABPWV&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;bookingReferenceID&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;aceba74f-a152-4626-b3b2-8173845adae5&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;currency&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;NPR&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;passengers&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="s">&quot;passenger_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;ST608028&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;passenger_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;ADT&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;passenger_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Rayamajhi Anil&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="s">&quot;tripType&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;round&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">//TBA</span>
+<span class="p">{</span>
+
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="failure">Failure</h4>
+<ul>
+<li>Failure: <code>https://example.sastotickets.com/failure?message=&lt;error_message&gt;</code> as set in the JSON.</li>
+<li>
+<p>Example:</p>
+<p><code>https://example.sastotickets.com/failure?message=access_token%20and%20phone_number%20is%20required</code>
+<code>https://example.sastotickets.com/failure?message=Booking%20Failed.%20Flight%20has%20been%20booked%20or%20not%20available.%20Please%20try%20with%20another%20flight</code></p>
+</li>
 </ul>
 
 
