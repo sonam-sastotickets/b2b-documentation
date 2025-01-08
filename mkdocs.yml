@@ -22,6 +22,8 @@ nav:
 - Integration with Apps : getting-started.md
 - Payment : payment.md
 - Ticketing : ticketing.md
+- Download eTicket : download.md
+- Ticket Details : details.md
 - Postman : postman.md
 markdown_extensions:
   - admonition

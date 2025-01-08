@@ -3,10 +3,11 @@ To initiate the booking process, the following JSON configuration must be genera
 ```json
 {
     "access_token": "<accessToken from previous step>",
-    "phone_number": 9800000000,
+    "phone_number": 9800000000, //or unique ID from your system
     "wallet_balance": 30000,
     "success_url": "https://example.sastotickets.com/success",
-    "failure_url": "https://example.sastotickets.com/failure"
+    "failure_url": "https://example.sastotickets.com/failure",
+    "msisdn": "--" //this is optional
 }
 ```
 !!! note
@@ -46,6 +47,7 @@ Example:
 
     ``` c++
     {
+        "msisdn": "-",
         "totalCost": 4407,
         "bearerToken": "-",
         "flightSummary": {
@@ -93,6 +95,7 @@ Example:
 
     ``` c++
     {
+        "msisdn": "-",
         "totalCost": 67342,
         "bearerToken": "-",
         "flightSummary": {
