@@ -159,7 +159,176 @@ Example:
     ``` c++
     //TBA
     {
-       
+        "msisdn": "-",
+        "totalCost": 48790,
+        "bearerToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hcGkuc2FzdG90aWNrZXRzLmNvbVwvYXBpXC9iMmJcL3YxXC9nZXQtdG9rZW4iLCJpYXQiOjE2ODU4NjczNjgsIm5iZiI6MTY4NTg2NzM2OCwianRpIjoiUW82a1ZFMTlLcVBqVkJCZyIsInN1YiI6NywicHJ2IjoiZjI3ZGJmMzc5MGU3YjFmY2E4ZGZiNmM4OGVmOTVhZjkwNDZhODhmYyJ9.0DHE33HQjIyFFO6OCM3JPykqLxcAT1iIpnc11Q0XUMM",
+        "flightSummary": {
+            "departureFlight": [
+            {
+                "dateOfDeparture": "2025-02-10",
+                "timeOfDeparture": "10:05 AM",
+                "dateOfArrival": "2025-02-10",
+                "timeOfArrival": "11:45 AM",
+                "locationDeparture": "KTM",
+                "airportDeparture": {
+                "name": "Tribhuvan Int’l Airport",
+                "city": "Kathmandu",
+                "code": "KTM",
+                "status": 1,
+                "country_id": 123,
+                "country": "Nepal"
+                },
+                "locationArrival": "DEL",
+                "airportArrival": {
+                "name": "Indira Gandhi Int’l Airport",
+                "city": "New Delhi",
+                "code": "DEL",
+                "status": 1,
+                "country_id": 77,
+                "country": "India"
+                },
+                "carrierCode": "AI",
+                "carrierName": "Air India",
+                "carrierLogo": "https://sastotickets-uat-flights.s3.ap-southeast-1.amazonaws.com/airlines/AI_air_india.png",
+                "carrierCodeMarketing": "AI",
+                "carrierCodeMarketingName": "Air India",
+                "carrierCodeMarketingLogo": "https://sastotickets-uat-flights.s3.ap-southeast-1.amazonaws.com/airlines/AI_air_india.png",
+                "total_flying_hours": "01 Hr 55 Min",
+                "segments": [
+                {
+                    "dateOfDeparture": "2025-02-10",
+                    "timeOfDeparture": "10:05 AM",
+                    "dateOfArrival": "2025-02-10",
+                    "timeOfArrival": "11:45 AM",
+                    "locationDeparture": "KTM",
+                    "airportDeparture": {
+                    "name": "Tribhuvan Int’l Airport",
+                    "city": "Kathmandu",
+                    "code": "KTM",
+                    "status": 1,
+                    "country_id": 123,
+                    "country": "Nepal"
+                    },
+                    "locationArrival": "DEL",
+                    "airportArrival": {
+                    "name": "Indira Gandhi Int’l Airport",
+                    "city": "New Delhi",
+                    "code": "DEL",
+                    "status": 1,
+                    "country_id": 77,
+                    "country": "India"
+                    },
+                    "departure_terminal": "I",
+                    "destination_terminal": "3",
+                    "carrierCode": "AI",
+                    "carrierName": "Air India",
+                    "carrierLogo": "https://sastotickets-uat-flights.s3.ap-southeast-1.amazonaws.com/airlines/AI_air_india.png",
+                    "carrierCodeMarketing": "AI",
+                    "carrierCodeMarketingName": "Air India",
+                    "carrierCodeMarketingLogo": "https://sastotickets-uat-flights.s3.ap-southeast-1.amazonaws.com/airlines/AI_air_india.png",
+                    "total_flying_hours": "01 Hr 55 Min",
+                    "flightNumber": "214",
+                    "equipmentType": "32N",
+                    "rbd": "W",
+                    "cabin": "M",
+                    "seats": "9",
+                    "connection_time": false
+                }
+                ],
+                "sortableTime": 605
+            },
+            {
+                "dateOfDeparture": "2025-03-18",
+                "timeOfDeparture": "19:30 PM",
+                "dateOfArrival": "2025-03-18",
+                "timeOfArrival": "21:35 PM",
+                "locationDeparture": "DEL",
+                "airportDeparture": {
+                "name": "Indira Gandhi Int’l Airport",
+                "city": "New Delhi",
+                "code": "DEL",
+                "status": 1,
+                "country_id": 77,
+                "country": "India"
+                },
+                "locationArrival": "DOH",
+                "airportArrival": {
+                "name": "Hamad Int’l Airport",
+                "city": "Doha",
+                "code": "DOH",
+                "status": 1,
+                "country_id": 140,
+                "country": "Qatar"
+                },
+                "carrierCode": "AI",
+                "carrierName": "Air India",
+                "carrierLogo": "https://sastotickets-uat-flights.s3.ap-southeast-1.amazonaws.com/airlines/AI_air_india.png",
+                "carrierCodeMarketing": "AI",
+                "carrierCodeMarketingName": "Air India",
+                "carrierCodeMarketingLogo": "https://sastotickets-uat-flights.s3.ap-southeast-1.amazonaws.com/airlines/AI_air_india.png",
+                "total_flying_hours": "04 Hr 35 Min",
+                "segments": [
+                {
+                    "dateOfDeparture": "2025-03-18",
+                    "timeOfDeparture": "19:30 PM",
+                    "dateOfArrival": "2025-03-18",
+                    "timeOfArrival": "21:35 PM",
+                    "locationDeparture": "DEL",
+                    "airportDeparture": {
+                    "name": "Indira Gandhi Int’l Airport",
+                    "city": "New Delhi",
+                    "code": "DEL",
+                    "status": 1,
+                    "country_id": 77,
+                    "country": "India"
+                    },
+                    "locationArrival": "DOH",
+                    "airportArrival": {
+                    "name": "Hamad Int’l Airport",
+                    "city": "Doha",
+                    "code": "DOH",
+                    "status": 1,
+                    "country_id": 140,
+                    "country": "Qatar"
+                    },
+                    "departure_terminal": "3",
+                    "destination_terminal": "",
+                    "carrierCode": "AI",
+                    "carrierName": "Air India",
+                    "carrierLogo": "https://sastotickets-uat-flights.s3.ap-southeast-1.amazonaws.com/airlines/AI_air_india.png",
+                    "carrierCodeMarketing": "AI",
+                    "carrierCodeMarketingName": "Air India",
+                    "carrierCodeMarketingLogo": "https://sastotickets-uat-flights.s3.ap-southeast-1.amazonaws.com/airlines/AI_air_india.png",
+                    "total_flying_hours": "04 Hr 35 Min",
+                    "flightNumber": "971",
+                    "equipmentType": "321",
+                    "rbd": "W",
+                    "cabin": "M",
+                    "seats": "9",
+                    "connection_time": false
+                }
+                ]
+            }
+            ]
+        },
+        "emergencyContact": {
+            "contact": "9800164565",
+            "email": "test@gmail.com",
+            "name": "Anil Rayamajhi"
+        },
+        "bookingSummary": {
+            "PNR": "TGV1KK",
+            "bookingReferenceID": "a7212ea5-9016-48e2-901a-05d23aa22bd7",
+            "currency": "NPR",
+            "passengers": [
+            {
+                "passenger_id": "ST24731",
+                "passenger_type": "ADT",
+                "passenger_name": "Rayamajhi Maya"
+            }
+            ],
+            "tripType": "multicity"
+        }
     }
     ```
 
