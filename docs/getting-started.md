@@ -157,7 +157,6 @@ Example:
 === "Multi City"
 
     ``` c++
-    //TBA
     {
         "msisdn": "-",
         "totalCost": 48790,
