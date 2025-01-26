@@ -323,7 +323,7 @@ Example:
             {
                 "passenger_id": "ST24731",
                 "passenger_type": "ADT",
-                "passenger_name": "Rayamajhi Maya"
+                "passenger_name": "Rayamajhi Anil"
             }
             ],
             "tripType": "multicity"
